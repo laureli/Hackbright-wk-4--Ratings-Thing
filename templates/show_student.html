@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>{{ student.first_name }} {{ student.last_name }}</h1>
+<h2>{{ student.github }}</h2>
+
+{% for project in student.get_projects() %}
+{{ project.name }}
+{{ project.score }}
+{% endfor %}
+
+{% endblock %}
